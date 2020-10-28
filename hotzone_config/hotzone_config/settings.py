@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'patient.apps.PatientConfig',
     'virus.apps.VirusConfig',
     'visited_location.apps.VisitedLocationConfig',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
