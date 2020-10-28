@@ -13,7 +13,7 @@ $(document).ready(function() {
         // console.log(virusData);
         $.ajax({
             type: "POST",
-            url: "http://127.0.0.1:8000/post_create_virus/",
+            url: "/post_create_virus/",
             data: virusData,
             dataType: "json",
             contentType: "application/json;charset=utf-8",

@@ -28,7 +28,7 @@ $(document).ready(function() {
         console.log(caseData);
         $.ajax({
             type: "POST",
-            url: "http://127.0.0.1:8000/post_caserecord/",
+            url: "/post_caserecord/",
             data: caseData,
             dataType: "json",
             contentType: "application/json;charset=utf-8",

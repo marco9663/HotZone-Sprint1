@@ -45,7 +45,7 @@ $(document).ready(function() {
         var vlData = generateJson();
         $.ajax({
             type: "POST",
-            url: "http://127.0.0.1:8000/create_visitedlocation_post/",
+            url: "/create_visitedlocation_post/",
             data: vlData,
             dataType: "json",
             contentType: "application/json;charset=utf-8",
