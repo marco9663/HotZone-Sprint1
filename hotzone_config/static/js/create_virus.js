@@ -20,6 +20,7 @@ $(document).ready(function() {
             success: function(result) {
                 console.log(result);
                 $("#createStatus").text("Virus Record Added!");
+                $("#createVirusForm")[0].reset();
             },
             error: function(xhr, errmsg, err) {
                 console.log(xhr.status, errmsg, err);
@@ -29,3 +30,7 @@ $(document).ready(function() {
         });
     })
 });
+
+function resetForm() {
+    $("#createVirusForm")[0].reset();
+}

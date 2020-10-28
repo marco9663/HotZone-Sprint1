@@ -88,8 +88,19 @@ WSGI_APPLICATION = 'hotzone_config.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+# }
+
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'hotzone', 
+        'USER': 'postgres', 
+        'PASSWORD': '62915859',
+        'HOST': '127.0.0.1', 
+        'PORT': '5432',
+    }
 }
 
 

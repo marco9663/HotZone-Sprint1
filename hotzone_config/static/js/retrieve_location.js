@@ -52,6 +52,7 @@ $(document).ready(function() {
             success: function(result) {
                 console.log(result);
                 $("#confirmStatus").text("Location Added!");
+                $("#addLocationForm")[0].reset();
             },
             error: function(xhr, errmsg, err) {
                 console.log(xhr.status, errmsg, err);
