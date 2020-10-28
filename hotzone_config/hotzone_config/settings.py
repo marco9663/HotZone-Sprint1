@@ -27,7 +27,7 @@ SECRET_KEY = 'q^+-w@5e!&8$j=&9oh6*va2(*=eu%8c38*4zszl)z8zd9h#=$y'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://hot-zone.herokuapp.com/',
+    '*.herokuapp.com',
     ]
 
 
