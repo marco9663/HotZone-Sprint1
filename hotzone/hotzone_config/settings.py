@@ -24,12 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'q^+-w@5e!&8$j=&9oh6*va2(*=eu%8c38*4zszl)z8zd9h#=$y'
-SECRET_KEY = env('HOTZONE_SECRET_KEY')
+SECRET_KEY = 'q^+-w@5e!&8$j=&9oh6*va2(*=eu%8c38*4zszl)z8zd9h#=$y'
+# SECRET_KEY = env('HOTZONE_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = env.bool('HOTZONE_DEBUG', default=False)
+DEBUG = True
+# DEBUG = env.bool('HOTZONE_DEBUG', default=False)
 
 ALLOWED_HOSTS =  ['hot-zone.herokuapp.com', 'localhost', '127.0.0.1']
 
@@ -98,20 +98,20 @@ WSGI_APPLICATION = 'hotzone_config.wsgi.application'
 #     'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 # }
 
-DATABASES = {
-'default': env.dj_db_url('DATABASE_URL')
-}
-
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'hotzone', 
-#         'USER': 'postgres', 
-#         'PASSWORD': '62915859',
-#         'HOST': '127.0.0.1', 
-#         'PORT': '5432',
-#     }
+# 'default': env.dj_db_url('DATABASE_URL')
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'hotzone', 
+        'USER': 'postgres', 
+        'PASSWORD': '62915859',
+        'HOST': '127.0.0.1', 
+        'PORT': '5432',
+    }
+}
 
 
 # Password validation
