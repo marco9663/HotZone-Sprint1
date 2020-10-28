@@ -1,0 +1,13 @@
+{% load static %}
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/create_virus.js' %}"></script>
+<a href="{% url 'index' %}">Back to index Page</a>
+<p>Create New Virus Record</p>
+<form id="createVirusForm" action="">
+    <label for="name">Virus Name: </label><input type="text" id="name" name="name"><br>
+    <label for="commonName">Common Name: </label><input type="text" id="commonName" name="commonName"><br>
+    <label for="maxInfectiousPeriod">Max Infectious Period: </label><input type="text" id="maxInfectiousPeriod" name="maxInfectiousPeriod"><br>
+    <input type="button" id="createButton" value="Create Virus Record">
+    <input type="button" value="Generate Json" onclick="generateJson()">
+</form>
+<p id="createStatus"></p>
