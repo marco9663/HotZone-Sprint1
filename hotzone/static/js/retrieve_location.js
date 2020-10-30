@@ -21,6 +21,7 @@ function retrieve() {
             console.log(jqXHR);
             console.log(textStatus);
             console.log(errorThrown);
+            $("#locationRadio").text("");
             $("#retrieveStatus").text("Retrieved Falied!");
         }
     })
@@ -35,7 +36,7 @@ function updateResult() {
     var rLocation = "";
     $.each(retrievedResult, function(i, val) {
         cleanJsonKey(val);
-        rLocation += '<input type="radio" id="text' + i + '"name="location" value=' + "'" + JSON.stringify(val) + "'" + '><label for="text' + i + '">' + val.name + '</label><br>'
+        rLocation += '<input type="radio" id="text' + i + '"name="location" value=' + "'" + JSON.stringify(val) + "'" + '><label for="text' + i + '">' + val.name + '<br>(' + val.address + ')</label><br><br>'
     });
     $("#locationRadio").html(rLocation);
 }
